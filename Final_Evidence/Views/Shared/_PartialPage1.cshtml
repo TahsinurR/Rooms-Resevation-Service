@@ -1,0 +1,39 @@
+﻿@if (@ViewBag.records != null)
+{
+    <table class="table">
+        <tr>
+            <th>
+                ReserveId
+            </th>
+            <th>
+                GuestName
+            </th>
+            <th>
+                Days
+            </th>
+            <th>
+                Date
+            </th>
+        </tr>
+        @foreach (var item in @ViewBag.records)
+        {
+
+            <tr>
+                <td>
+                    <input type="text" id="ReserveId" name="ReserveId" value="@item.ReserveId" class="form-control" />
+                </td>
+                <td>
+                    <input type="text" id="GuestName" name="GuestName" value="@item.GuestName" class="form-control" />
+                </td>
+                <td>
+                    <input type="text" id="Days" name="Days" value="@item.Days" class="form-control" />
+                </td>
+                <td>
+                    <input type="text" id="Date" name="Date" value=" @item.Date" class="form-control" />
+                </td>
+            </tr>
+        }
+    </table>
+}
+
+
